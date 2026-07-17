@@ -1,0 +1,12 @@
+{
+  "name": "csbrasil-web-tests",
+  "private": true,
+  "scripts": {
+    "test:web:smoke": "playwright test tests/web/boot.spec.mjs",
+    "test:web": "playwright test tests/web"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.61.1"
+  }
+}
+

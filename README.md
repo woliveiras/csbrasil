@@ -25,6 +25,13 @@ python3 -m http.server 8123   # ou: npx serve .
 
 Abra `http://localhost:8123` no Chrome/Edge/Firefox **de desktop**.
 
+## Port Godot em desenvolvimento
+
+O novo cliente Godot 4.7.1 é desenvolvido em paralelo em `godot/`; ele ainda
+não substitui a versão Three.js publicada. Consulte o
+[guia de desenvolvimento Godot](docs/development/godot.md) para configurar o
+VS Code, executar testes e gerar a exportação Web.
+
 ## Controles
 
 | Tecla | Ação |
