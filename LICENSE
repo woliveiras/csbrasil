@@ -23,7 +23,7 @@ SOFTWARE.
 ---
 
 NOTE: the MIT license above covers the SOURCE CODE only (HTML/CSS/JS).
-Files under `audio/` are user-provided meme clips and are NOT covered by
+Files under `web/audio/` are user-provided meme clips and are NOT covered by
 this license — verify rights before redistributing them. Three.js
-(vendor/three.module.js) is MIT-licensed by the Three.js authors.
+(web/vendor/three.module.js) is MIT-licensed by the Three.js authors.
 "Counter-Strike" is a trademark of Valve; this is an unofficial fan satire.

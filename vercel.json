@@ -1,7 +1,7 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "buildCommand": "bash scripts/fetch-audio.sh",
-  "outputDirectory": ".",
+  "outputDirectory": "web",
   "cleanUrls": true,
   "headers": [
     {

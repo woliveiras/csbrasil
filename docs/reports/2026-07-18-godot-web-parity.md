@@ -9,9 +9,9 @@ Resultado: **apto para preview e solicitação do gate de corte**
 ## Escopo verificado
 
 O cliente Godot foi comparado com os contratos capturados do cliente Three.js,
-exportado para Web e exercitado em Chromium e Firefox. O cliente legado e o
-`vercel.json` de produção permanecem inalterados. Este relatório não autoriza
-nem executa o corte do domínio principal.
+exportado para Web e exercitado em Chromium e Firefox. O cliente legado
+permanece isolado em `web/`, e o `vercel.json` de produção continua apontando
+para ele. Este relatório não autoriza nem executa o corte do domínio principal.
 
 ## Computador de referência
 
@@ -56,7 +56,7 @@ bytes, `index.js` com 279.815 bytes e `index.pck` com 139.224 bytes.
 
 | ID | Requisito | Evidência | Resultado |
 | --- | --- | --- | --- |
-| F01 | Coexistência e deploy legado preservado | `boot.spec.mjs`; `vercel.json` ainda usa output `.`; config Godot separada | Passou |
+| F01 | Coexistência e deploy legado preservado | `boot.spec.mjs`; `vercel.json` usa output `web`; config Godot separada | Passou |
 | F02 | Fluxo menu → seleção → partida → pausa/fim → menu | `test_game_ui_flow.gd`; `ui.spec.mjs` | Passou |
 | F03 | Nick, sensibilidade, volume e qualidade persistentes | `test_game_settings.gd`; `ui.spec.mjs` | Passou |
 | F04 | Controles atuais | mapa de input em `project.godot`; testes Web de movimento, armas, rádio e placar | Passou |
@@ -115,7 +115,7 @@ WebGL usa renderização por software e não mede a GPU de referência. Por isso
 Estado do gate: **pronto para revisão do usuário, ainda não aprovado**.
 
 - `vercel.godot-preview.json` constrói e publica somente `build/web`.
-- `vercel.json` continua apontando para o cliente Three.js na raiz.
+- `vercel.json` continua apontando para o cliente Three.js em `web/`.
 - Nenhum preview ou deploy externo foi criado por esta execução.
 - O futuro corte deve ser um commit isolado, após preview aprovado.
 - O rollback será o revert desse commit de corte; os arquivos do cliente legado

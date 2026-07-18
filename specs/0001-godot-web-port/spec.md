@@ -17,7 +17,7 @@ HTML, CSS e JavaScript. O cliente possui arena, personagens e texturas
 procedurais, movimento FPS, três armas, bots, rounds, HUD, áudio, persistência
 local e publicação estática na Vercel.
 
-A implementação concentra grande parte do comportamento em `js/game.js` e
+A implementação concentra grande parte do comportamento em `web/js/game.js` e
 mantém física, colisão, navegação, ciclo de vida e UI por mecanismos próprios.
 O objetivo desta especificação é portar o cliente para Godot, preservando a
 experiência atual enquanto se adota uma engine especializada, GDScript tipado,

@@ -20,7 +20,7 @@ online — dificuldade é o que dá replayability):
   headshot mata, HUD mínimo, HP 50, velocidade ×1.5.
 
 A base já está pronta: `skill`, `reactAt`, `nextShotAt` e dano dos bots em
-`js/game.js` são parâmetros fáceis de escalar por nível.
+`web/js/game.js` são parâmetros fáceis de escalar por nível.
 
 ## Gameplay
 
@@ -40,7 +40,7 @@ A base já está pronta: `skill`, `reactAt`, `nextShotAt` e dano dos bots em
 
 ## Mapas
 
-- 🟢 **Variações do mapa atual** — o `js/map.js` é declarativo; dá pra gerar
+- 🟢 **Variações do mapa atual** — o `web/js/map.js` é declarativo; dá pra gerar
   "noite", "chuva", "carnaval" mudando luz/props.
 - 🟡 **Novos mapas temáticos** — estádio de futebol, praia com calçadão,
   festa junina, terminal de ônibus. Mesmo esquema simétrico de arena.
@@ -72,7 +72,7 @@ A base já está pronta: `skill`, `reactAt`, `nextShotAt` e dano dos bots em
 
 - 🟢 **Novos packs de voz** — mais falas fictícias por time (sempre originais
   ou licenciadas, ver regras de conteúdo).
-- 🟢 **Novos grafites/pôsteres** — slogans fictícios em `js/textures.js`.
+- 🟢 **Novos grafites/pôsteres** — slogans fictícios em `web/js/textures.js`.
 - 🟡 **Trilha sonora procedural** — música de menu gerada em WebAudio
   (funkão 8-bit?).
 

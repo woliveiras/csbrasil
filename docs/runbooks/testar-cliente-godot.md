@@ -244,7 +244,7 @@ média de pelo menos 60 FPS e p95 de frame time menor ou igual a 33,3 ms.
 | Playwright não encontra navegador | Execute `npx playwright install chromium firefox`. |
 | Tela Web não inicia | Confirme WebGL 2, use HTTP em vez de `file://` e inspecione o console do navegador. |
 | Mouse não controla a câmera | Clique no canvas; use `Esc` para liberar e clique novamente para recapturar. |
-| Áudio não toca | Interaja com a página, confira o volume e aceite o fallback se `audio/manifest.json` não existir. |
+| Áudio não toca | Interaja com a página, confira o volume e aceite o fallback se `web/audio/manifest.json` não existir. |
 | FPS muito baixo somente em teste | Confirme que executou `npm run test:web:performance`, com janelas visíveis e aceleração de hardware ativa. |
 | Firefox demora no primeiro boot | Aguarde a compilação inicial do WASM; os testes funcionais toleram até 40 segundos nos fluxos mais pesados. |
 | LSP ou breakpoints não funcionam | Abra `Godot: Editor`, confirme as portas 6005/6006 e reinicie a extensão Godot Tools. |

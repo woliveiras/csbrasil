@@ -77,9 +77,10 @@ volume e qualidade são persistidos no armazenamento local.
 `godot/web/shell.html` é o shell customizado da exportação. Ele contém conteúdo
 HTML legível antes do WASM, canonical, Open Graph, Twitter Card, JSON-LD e o
 stub que encaminha `game_start` e `match_end` ao Vercel Analytics. A exportação
-também copia `robots.txt`, `sitemap.xml`, `llms.txt` e `og-image.png`.
+também copia `web/robots.txt`, `web/sitemap.xml`, `web/llms.txt` e
+`web/og-image.png`.
 
-`vercel.json` permanece intocado para preservar o deploy Three.js. A configuração
+`vercel.json` publica `web/` para preservar o deploy Three.js. A configuração
 paralela `vercel.godot-preview.json` aponta para `build/web` e pode ser usada
 somente em preview, após autenticação explícita:
 

@@ -39,13 +39,14 @@ Sem o pacote de áudio o jogo funciona com sons sintetizados (fallback).
   logos, marcas, fotos — só material original ou livre com licença compatível.
 - Novos personagens/times seguem o padrão: arquétipo fictício, nome fictício,
   humor sem crueldade, sem mirar grupos protegidos.
-- Arquivos de áudio/imagens grandes **não vão pro git** — o diretório `audio/`
-  é ignorado; novos sons entram no pacote via `audio/manifest.example.json`.
+- Arquivos de áudio/imagens grandes **não vão pro git** — o diretório
+  `web/audio/` é ignorado; novos sons entram no pacote via
+  `web/audio/manifest.example.json`.
 
 **Código**
 - Vanilla JS com ES modules, **sem framework e sem build** — decisão de
   projeto (o jogo deve rodar arrastando a pasta pra qualquer host estático).
-- Three.js é vendored em `vendor/` — não adicione CDNs nem `npm install` de
+- Three.js é vendored em `web/vendor/` — não adicione CDNs nem `npm install` de
   runtime sem antes abrir uma issue e discutir.
 - Mantenha o estilo do código ao redor (nomes, comentários em pt-BR, padrões).
 - PRs pequenos e focados: uma feature ou um fix por PR.

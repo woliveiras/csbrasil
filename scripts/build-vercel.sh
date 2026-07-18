@@ -7,7 +7,7 @@ REPO_ROOT=$(CDPATH= cd -- "$SCRIPT_DIR/.." && pwd)
 
 # The audio package is optional. A failed private/release download must not
 # prevent the procedural fallback build from being published.
-if [ ! -f "$REPO_ROOT/audio/manifest.json" ]; then
+if [ ! -f "$REPO_ROOT/web/audio/manifest.json" ]; then
   "$SCRIPT_DIR/fetch-audio.sh" || echo "Pacote de áudio indisponível; usando fallbacks."
 fi
 

@@ -25,5 +25,5 @@ test('packages SEO files and Vercel static headers with the Godot output', async
   expect(config.headers.some(rule => rule.source.includes('wasm|pck|js'))).toBe(true);
   expect(config.headers.some(rule => rule.source.includes('robots.txt'))).toBe(true);
   const productionConfig = JSON.parse(await readFile(new URL('../../vercel.json', import.meta.url), 'utf8'));
-  expect(productionConfig.outputDirectory).toBe('.');
+  expect(productionConfig.outputDirectory).toBe('web');
 });

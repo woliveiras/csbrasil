@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Baixa o pacote de áudio (vozes meme + sons de arma) para audio/.
+# Baixa o pacote de áudio (vozes meme + sons de arma) para web/audio/.
 # O pacote NÃO fica no git por licenciamento — ver README, seção "Pacote de áudio".
 set -e
 cd "$(dirname "$0")/.."
@@ -8,12 +8,12 @@ cd "$(dirname "$0")/.."
 # (ex.: asset de GitHub Release, ou URL privada de R2/S3 para deploys).
 URL="${AUDIO_PACK_URL:-https://github.com/rubenmarcus/csbrasil/releases/download/audio-pack-v1/audio-pack.zip}"
 
-if [ -f audio/manifest.json ]; then
-  echo "audio/ já configurado — nada a fazer."
+if [ -f web/audio/manifest.json ]; then
+  echo "web/audio/ já configurado — nada a fazer."
   exit 0
 fi
 echo "Baixando pacote de áudio de: $URL"
 curl -fsSL "$URL" -o /tmp/csbrasil-audio.zip
-unzip -o -q /tmp/csbrasil-audio.zip -d audio/
-[ -f audio/manifest.json ] || cp audio/manifest.example.json audio/manifest.json
-echo "Pronto. Áudio instalado em audio/."
+unzip -o -q /tmp/csbrasil-audio.zip -d web/audio/
+[ -f web/audio/manifest.json ] || cp web/audio/manifest.example.json web/audio/manifest.json
+echo "Pronto. Áudio instalado em web/audio/."
