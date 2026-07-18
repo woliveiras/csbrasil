@@ -8,5 +8,6 @@ audio-pack.zip
 node_modules/
 godot/.godot/
 build/
+.godot-ci/
 test-results/
 playwright-report/

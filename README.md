@@ -32,6 +32,12 @@ não substitui a versão Three.js publicada. Consulte o
 [guia de desenvolvimento Godot](docs/development/godot.md) para configurar o
 VS Code, executar testes e gerar a exportação Web.
 
+A exportação paralela já inclui shell SEO/AEO, analytics, áudio opcional e uma
+configuração Vercel própria. O preview pode ser preparado localmente com
+`scripts/build-vercel.sh`; `vercel.json` continua servindo o cliente legado até
+o gate explícito de corte. Quando autorizado, a configuração de preview pode
+ser usada pela CLI com `--local-config vercel.godot-preview.json`.
+
 ## Controles
 
 | Tecla | Ação |
@@ -117,7 +123,8 @@ este jogo. Se você possui o jogo legalmente, pode usar seus próprios arquivos:
 O site já sai pronto para indexação (não usa biblioteca — AEO em site estático
 é feito com dados estruturados, não com JS):
 
-- `index.html`: title/description, canonical, Open Graph + Twitter card
+- `index.html` (legado) e `godot/web/shell.html` (Godot): title/description,
+  canonical, Open Graph + Twitter card
   (`og-image.png` 1200×630), `theme-color`, `h1` oculto para crawlers.
 - **JSON-LD**: `VideoGame` + `FAQPage` (é o que alimenta answer engines).
 - `robots.txt` (libera tudo, bloqueia `/audio/` e `/vendor/`), `sitemap.xml`,
